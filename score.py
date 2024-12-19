@@ -8,9 +8,13 @@ Original file is located at
 """
 
 score = input().split()
-
 countF = 0
+sum = 0
+
 for s in score:
-  if int(s) < 60:
-    countF += 1
+  if int(s) < 60: countF += 1   #Counting Fail
+  sum += s  #Calculate Sum
+avg = sum // len(score)
+
 print(countF)
+print(avg)
