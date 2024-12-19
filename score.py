@@ -8,9 +8,15 @@ Original file is located at
 """
 
 score = input().split()
-
 countF = 0
+min, max = 100, 0
+
 for s in score:
-  if int(s) < 60:
-    countF += 1
+  if int(s) < 60: countF += 1   #Counting Fail
+  if s > max:
+    max = s
+  if s < min:
+    min = s
+
 print(countF)
+print(min, max)
